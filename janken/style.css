@@ -1,0 +1,26 @@
+
+#click {
+  
+  margin: 0 auto;
+}
+
+#container {
+  margin: 0 auto;
+  width: 500px;
+  display: flex;
+  background-color: bisque;
+}
+
+.janken {
+  margin: 0 auto;
+  width: 50%;
+  background-color: aquamarine;
+}
+
+.janken img {
+  width: 50%;
+}
+
+h1, p {
+  text-align: center;
+}
