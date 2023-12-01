@@ -5,41 +5,23 @@ const foo = document.getElementById('foo');
 executionBtn.addEventListener('click', () => {
 	const number = document.getElementById('number');
 	const Num = number.value;
-	console.log(Num);
+	console.log(judge(Num));
 
-	if(judge) {
-		foo.innerHTML = 'は素数です';
+	if(judge(Num) === false) {
+		foo.innerHTML = Num + 'は素数ではありません';
 	} else {
-		foo.innerHTML = 'は素数ではありません';
+		foo.innerHTML = Num + 'は素数です';
 	}
 	
 });
 
 
-
-const judge = (number) => {
-	for(let i = 2; i < number; i++) {
-		if(number % i === 0) {
-			// console.log(false);
+const judge = (Num) => {
+	if(Num <= 1) return false;
+	for(let i = 2; i < Num; i++) {
+		if(Num % i === 0) {
 			return false;
-		} else {
-			// console.log(trure);
-			return true;
 		}
 	}
+	return true;
 }
-
-
-// Judge();
-
-// let number = document.getElementById('number');
-
-// console.log();
-
-// function Judge () {
-// 	// console.log('test');
-// 	for(let i = 0; i < number; i++) {
-
-// 	}
-
-// }
